@@ -1,0 +1,23 @@
+<div class="container-fluid animate__animated animate__slideInRight">
+  <h2 class="encabezado h2">Ultimo Agregado</h2>
+
+
+  <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+    [animation]="'slide'">
+    <mdb-carousel-item *ngFor="let item of slides; let i = index">
+      <div class="col-12 col-sm-6 col-md-4 mb-4 d-flex align-items-stretch"
+        *ngFor="let material of item; let materialIndex = index">
+        <mdb-card class="my-1">
+          <mdb-card-img [src]="material.img" alt="Card image cap" id="imgCard"></mdb-card-img>
+          <mdb-card-body>
+            <mdb-card-title>
+              <h2><i>{{material.name}}</i></h2>
+            </mdb-card-title>
+            <a [routerLink]="['/'+material.name]" mdbBtn color="primary" class="waves-light" mdbWavesEffect>Ver
+              ahora</a>
+          </mdb-card-body>
+        </mdb-card>
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>
+</div>

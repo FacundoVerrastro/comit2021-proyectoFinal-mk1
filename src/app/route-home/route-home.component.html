@@ -1,0 +1,14 @@
+<div class="route-home">
+  <app-header></app-header>
+  <div class="home-body">
+    <div class="presentacion">
+      <h1 id="h1">Mira todas tus peliculas y series preferidas en un solo lugar.</h1>
+      <h2>Disfruta de todo el contenido al alcanze de tu mano.</h2>
+      <h3 id="contamosCon">Contamos con {{movies}} Pelicula<span *ngIf="movies!=1">s</span> y {{series}} Serie<span *ngIf="series!=1">s</span>.</h3>
+      <h3>¡Registrate ahora y obtene tu primer mes GRATIS!</h3>
+    </div>
+    <app-registro></app-registro>
+  </div>
+  
+</div>
+<app-footer></app-footer>

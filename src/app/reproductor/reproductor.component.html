@@ -1,0 +1,32 @@
+<div id="containerReproductor">
+  <div id="titulo">
+    <h2><i>{{titulo}} <span *ngIf="!language">{{description}}</span><span *ngIf="language">{{language}}</span></i></h2>
+  </div>
+
+  <div class="embed-container">
+    <iframe id="reproductor" frameborder="0" [src]="source" allowfullscreen></iframe>
+  </div>
+  <div class="botonesReproductor">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-4 botones">
+          
+          <button *ngIf="previusEpisode!=0" (click)="previus()" type="button" class="btn btn-warning  animate__animated animate__fadeIn"
+            id="buttonPrevius">&lt;&lt; <span class="descriptionButtons">Anterior Episodio</span></button>
+        </div>
+        <div class="col-4 botones">
+          <button type="button" (click)="indice()"class="btn btn-warning  animate__animated animate__fadeIn" id="buttonIndice">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="col-4 botones">
+          <button *ngIf="nextEpisode!=0" (click)="next()" type="button" class="btn btn-warning  animate__animated animate__fadeIn"
+            id="buttonNext"><span class="descriptionButtons">Siguiente Episodio</span> &gt;&gt;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

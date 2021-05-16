@@ -1,0 +1,76 @@
+#containerReproductor {
+  margin: 0%;
+  padding: 0%;
+  padding-top: 0%;
+  width: 100%;
+  position: relative;
+  background-color: honeydew;
+  color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#reproductor {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  align-self: center;
+}
+
+#titulo {
+  padding-left: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: honeydew;
+}
+
+.embed-container {
+  position: relative;
+  margin: 1%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.botonesReproductor {
+  padding-left: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: honeydew;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media(max-width: 768px) {
+  .botonesReproductor {
+    padding-left: 0%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    background-color: honeydew;
+  }
+
+  .descriptionButtons {
+    display: none;
+  }
+}
+
+@media(max-width: 396px) {
+  .botonesReproductor {
+    padding-left: -1%;
+    padding-top: -1%;
+    padding-bottom: -1%;
+    background-color: honeydew;
+  }
+}
