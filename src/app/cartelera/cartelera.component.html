@@ -1,0 +1,14 @@
+<div class="app-cartelera container-fluid">
+     <img src="{{materiales[0].img}}"
+     alt="" width="600" height="800" class="img-fluid cartelera-imagen animate__animated animate__slideInDown">
+     <div class="cartelera-descripcion container-fluid">
+          <div id="containerPresentacion" class="animate__animated animate__fadeIn">
+          <div id="presentacion" class="animate__animated animate__fadeIn">
+          <h1 id='titulo' class="itemPresentacion animate__animated animate__fadeIn"><i>{{materiales[0].name}}</i></h1>
+          <h2 id="generos" class="itemPresentacion animate__animated animate__fadeIn">Generos: {{materiales[0].generos}}.</h2>
+          <h2 id="descripcion" class="itemPresentacion animate__animated animate__fadeIn">{{materiales[0].description}}</h2>
+          <div><button [routerLink]="['/'+materiales[0].name]" mdbBtn color="warning" size="lg" class="waves-light btn-block animate__animated animate__fadeIn" mdbWavesEffect>Ver ahora</button></div>
+        </div>
+      </div>
+     </div>
+</div>

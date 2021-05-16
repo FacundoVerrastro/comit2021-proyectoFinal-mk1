@@ -1,0 +1,52 @@
+<div class="container-outside">
+  <app-header></app-header>
+  <div class="container container-inside">
+    <div class="containerMaterial">
+      <img src="{{img}}" class="img-fluid" alt="" height="100%" width="30%" class="animate__animated animate__bounceInDown">
+      <div id="containerPresentacion">
+        <div id="presentacion" class="animate__animated animate__fadeIn">
+          <h1 id='titulo' class="itemPresentacion"><i>{{nombre}}</i></h1>
+          <div id='type' class="itemPresentacion"><h2>Tipo: {{type}}.</h2></div>
+          <div id="generos" class="itemPresentacion"><h2>Generos: {{generos}}.</h2></div>
+          <div id="rating" class="itemPresentacion"><h2>Puntaje: {{rating}} ⭐</h2></div>
+          <div id="yearOfRelease" class="itemPresentacion"><h2>Emitido: {{yearOfRelease}}.</h2></div>
+          <div id="cantEpisodios" class="itemPresentacion" *ngIf="type=='serie'"><h2>Episodios: {{cantEpisodios}}.</h2></div>
+          <div id="descripcion" class="itemPresentacion"><h2>{{description}}</h2></div>
+        </div>
+      </div>
+    </div>
+    <div class="containerEpisodios">
+      <div id="episodios">
+        <div class="container  animate__animated animate__bounceInUp">
+          <h2 *ngIf="type=='movie'">Idiomas</h2>
+          <h2 *ngIf="type=='serie'">Lista de capitulos:</h2>
+          <div class="row row-cols-4 row-col-sm-6 " background-color="white">
+            <div *ngFor="let episodio of episodios" class="col episodio">
+              <div class="borderEpisode">
+                <div class="container-hover">
+                  <div class="episodioImg linkToCap" (click)="linkToCap(episodio.id)"><img src="{{episodio.img}}" alt=""
+                      class="card-img-top img-fluid m-0 image-hover"></div>
+                  <div class="middle-hover">
+                    <div class="text-hover" (click)="linkToCap(episodio.id)">
+                      <h2 id="title-hover">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor"
+                          class="bi bi-play-circle" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                          <path
+                            d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
+                        </svg>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="episodioDescription linkToCap" (click)="linkToCap(episodio.id)">
+                  <span *ngIf="type=='serie'">&nbsp;&nbsp;&nbsp;{{episodio.description}}</span><span *ngIf="type=='movie'">&nbsp;&nbsp;&nbsp;{{episodio.language}}</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
